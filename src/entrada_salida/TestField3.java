@@ -1,13 +1,10 @@
 package entrada_salida;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
-import demo.Evento_cerrar_ventana;
 
 public class TestField3 extends TestField2
 {
@@ -21,9 +18,9 @@ public class TestField3 extends TestField2
 		setSize(300,300);
 		user.setBounds(10,50,100,100);
 		pass.setBounds(10,70,100,100);
-		add(user);add(pass);add(bLogin);
-//		bLogin.addActionListener((ActionListener)new Evento_cerrar_ventana());
+		add(user);add(pass);
 		bLogin.setBounds(10,110,100,100);
+		add(bLogin);
 		bLogin.addActionListener(this);
 	}
 	@Override
@@ -37,7 +34,7 @@ public class TestField3 extends TestField2
 	private void mostrar()
 	{
 		setear();
-		setBounds(10,100,140,150);
+		setBounds(5,5,140,150);
 		setVisible(true);
 	}
 	private void mostrarLoginCorrecto()
@@ -58,7 +55,7 @@ public class TestField3 extends TestField2
 	{
 		(new TestField3()).mostrar();
 		disponiblePorSegundos(20);
-//		(new TestField3()).mostrarEmergente("Hola");
+		
 	}
 
 }
