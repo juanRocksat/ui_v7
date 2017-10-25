@@ -6,15 +6,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JSpinner.ListEditor;
 import javax.swing.JTextField;
 
 import graficos_v1.MostrarImagen;
 
 public class TestField1 extends JFrame implements ActionListener
 {
-	public JTextField textField1=new JTextField();
+	private JTextField textField1=new JTextField();
 	public JLabel label1=new JLabel("Usuario: ");
-	public JButton boton1=new JButton("Aceptar->");
+	private JButton boton1=new JButton("Aceptar->");
 	
 	public void setear()
 	{
@@ -39,7 +40,7 @@ public class TestField1 extends JFrame implements ActionListener
 		setBounds(0,0,300,150);
 		setVisible(true);
 	}
-	private static  void disponiblePorSegundos(long  segundos) throws InterruptedException
+	public static  void disponiblePorSegundos(long  segundos) throws InterruptedException
 	{
 		Thread.sleep(segundos*1000);
 		System.exit(ABORT);
